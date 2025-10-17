@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورود به حساب کاربری | پلتفرم ما</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index2.html">
+    <link rel="stylesheet" href="index3.html">
+</head>
+<body>
+    <!-- پس‌زمینه انیمیشنی -->
+    <div class="background-animation">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+
+    <div class="container">
+        <div class="login-card">
+            <!-- بخش تصویر -->
+            <div class="login-image">
+                <div class="logo">
+                    <i class="fas fa-rocket"></i>
+                    <span>پلتفرم ما</span>
+                </div>
+                <div class="overlay">
+                    <h2>به جامعه ما بپیوندید</h2>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>امنیت بالا</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-bolt"></i>
+                            <span>سرعت فوق‌العاده</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-headset"></i>
+                            <span>پشتیبانی 24/7</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- بخش فرم -->
+            <div class="login-form">
+                <div class="form-header">
+                    <div class="welcome-text">
+                        <h1>خوش آمدید!</h1>
+                        <p>لطفا وارد حساب کاربری خود شوید</p>
+                    </div>
+                    <div class="theme-toggle">
+                        <button id="themeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <form id="loginForm">
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" placeholder="آدرس ایمیل" required>
+                        <span class="input-focus"></span>
+                    </div>
+                    
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" placeholder="رمز عبور" required>
+                        <button type="button" class="toggle-password">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <span class="input-focus"></span>
+                    </div>
+                    
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox" id="rememberMe">
+                            <span class="checkmark"></span>
+                            مرا به خاطر بسپار
+                        </label>
+                        <a href="#" class="forgot-password">رمز عبور را فراموش کرده‌اید؟</a>
+                    </div>
+                    
+                    <button type="submit" class="login-btn">
+                        <span class="btn-text">ورود به حساب</span>
+                        <div class="btn-loader">
+                            <div class="spinner"></div>
+                        </div>
+                    </button>
+                    
+                    <div class="divider">
+                        <span>یا با روش‌های دیگر وارد شوید</span>
+                    </div>
+                    
+                    <div class="social-login">
+                        <button type="button" class="social-btn google" onclick="loginWithGoogle()">
+                            <i class="fab fa-google"></i>
+                            <span>ورود با گوگل</span>
+                        </button>
+                        <button type="button" class="social-btn github" onclick="loginWithGithub()">
+                            <i class="fab fa-github"></i>
+                            <span>ورود با گیت‌هاب</span>
+                        </button>
+                        <button type="button" class="social-btn twitter" onclick="loginWithTwitter()">
+                            <i class="fab fa-twitter"></i>
+                            <span>ورود با توییتر</span>
+                        </button>
+                    </div>
+                    
+                    <div class="signup-section">
+                        <p>حساب کاربری ندارید؟</p>
+                        <a href="register.html" class="signup-link">ایجاد حساب جدید</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- نوتیفیکیشن -->
+        <div id="notification" class="notification hidden">
+            <i class="notification-icon"></i>
+            <span class="notification-text"></span>
+            <button class="notification-close" onclick="hideNotification()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

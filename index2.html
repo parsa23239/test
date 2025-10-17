@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>داشبورد | پلتفرم ما</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="logo">
+                <i class="fas fa-rocket"></i>
+                <span>پلتفرم ما</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#"><i class="fas fa-home"></i> داشبورد</a></li>
+                <li><a href="#"><i class="fas fa-user"></i> پروفایل</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> تنظیمات</a></li>
+                <li><a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> خروج</a></li>
+            </ul>
+        </nav>
+        
+        <main class="main-content">
+            <h1>خوش آمدید به داشبورد!</h1>
+            <p>این صفحه بعد از ورود موفق نمایش داده می‌شود.</p>
+        </main>
+    </div>
+
+    <script>
+        function logout() {
+            localStorage.removeItem('userToken');
+            sessionStorage.removeItem('userToken');
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
